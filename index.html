@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta name="description" content="Currículo de Marcos Francisco Rocha, Líder Técnico, Scrum Master e Analista de Sistemas em Araranguá, SC." />
    <title>Marcos Francisco Rocha - Currículo</title>
+   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>" />
    <script type="application/ld+json">
    {
       "@context": "https://schema.org",
@@ -43,18 +44,60 @@
    }
    </script>
    <style>
+      :root {
+         --color-bg: #eef1f4;
+         --color-surface: #ffffff;
+         --color-text: #22282e;
+         --color-text-muted: #5b6672;
+         --color-primary: #1e3348;
+         --color-heading: #1e3348;
+         --color-accent: #2f7ed1;
+         --color-border: #e2e6ea;
+         --color-badge-bg: #eaf1fb;
+         --color-badge-text: #1e3348;
+      }
+
+      @media (prefers-color-scheme: dark) {
+         :root {
+            --color-bg: #11161b;
+            --color-surface: #1a2129;
+            --color-text: #e7ebee;
+            --color-text-muted: #a3adb6;
+            --color-primary: #16202c;
+            --color-heading: #5ea1ef;
+            --color-accent: #5ea1ef;
+            --color-border: #2a333c;
+            --color-badge-bg: #223247;
+            --color-badge-text: #cfe1fa;
+         }
+      }
+
+      * {
+         box-sizing: border-box;
+      }
+
       body {
-         font-family: 'Segoe UI', sans-serif;
+         font-family: 'Segoe UI', system-ui, sans-serif;
          margin: 0;
          padding: 0;
-         background-color: #f4f6f8;
-         color: #333;
+         background-color: var(--color-bg);
+         color: var(--color-text);
+      }
+
+      a {
+         color: var(--color-accent);
+         text-decoration: none;
+      }
+
+      a:hover,
+      a:focus-visible {
+         text-decoration: underline;
       }
 
       .header-flex {
          display: flex;
          align-items: center;
-         background-color: #2c3e50;
+         background-color: var(--color-primary);
          color: white;
          padding: 2rem;
          gap: 2rem;
@@ -67,7 +110,7 @@
          height: 140px;
          border-radius: 50%;
          object-fit: cover;
-         border: 3px solid #ecf0f1;
+         border: 3px solid rgba(255, 255, 255, 0.4);
       }
 
       .header-text h1 {
@@ -78,23 +121,46 @@
       .header-text p {
          margin: 0.5rem 0;
          font-size: 1.1rem;
+         color: rgba(255, 255, 255, 0.85);
       }
 
       main {
          max-width: 900px;
          margin: 2rem auto;
-         padding: 0 1rem;
-         background-color: white;
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-         border-radius: 8px;
+         padding: 0.5rem 2rem 2rem;
+         background-color: var(--color-surface);
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+         border-radius: 10px;
       }
 
       section {
          margin-bottom: 2rem;
+         padding-top: 1.5rem;
+         border-top: 1px solid var(--color-border);
+      }
+
+      section:first-child {
+         border-top: none;
       }
 
       h2 {
-         color: #2c3e50;
+         color: var(--color-heading);
+      }
+
+      h3 {
+         color: var(--color-text);
+         border-left: 3px solid var(--color-accent);
+         padding-left: 0.6rem;
+      }
+
+      h3 .date {
+         color: var(--color-text-muted);
+         font-weight: normal;
+         font-size: 0.9rem;
+      }
+
+      p, li {
+         color: var(--color-text);
       }
 
       ul {
@@ -114,13 +180,51 @@
       }
 
       .badge {
-         background-color: #34495e;
-         color: white;
-         padding: 0.3rem 0.6rem;
-         border-radius: 4px;
-         font-size: 0.9rem;
+         background-color: var(--color-badge-bg);
+         color: var(--color-badge-text);
+         padding: 0.3rem 0.7rem;
+         border-radius: 999px;
+         font-size: 0.85rem;
          display: inline-block;
          margin: 0.2rem 0.4rem 0.2rem 0;
+         font-weight: 600;
+      }
+
+      .badge-list {
+         list-style: none;
+         padding-left: 0;
+      }
+
+      @media print {
+         body {
+            background: white;
+         }
+
+         .header-flex {
+            background: white !important;
+            color: black !important;
+         }
+
+         .header-text p {
+            color: #333 !important;
+         }
+
+         main {
+            box-shadow: none;
+            margin: 0;
+            max-width: 100%;
+         }
+
+         a {
+            color: black;
+            text-decoration: underline;
+         }
+
+         .badge {
+            border: 1px solid #999;
+            background: white !important;
+            color: black !important;
+         }
       }
    </style>
 </head>
@@ -157,7 +261,7 @@
          <h2>Experiências</h2>
          <h3>Semantix (Atos) – Líder Técnico (Nov/2023 – Presente)</h3>
          <ul>
-            <li>Facilitador de squads ágeis, com foco em redução no tempo de entrega</li>
+            <li>Facilitador de squads ágeis, com foco na redução do tempo de entrega</li>
             <li>Validação técnica de aplicações e análise de critérios de aceite</li>
             <li>Refinamento de backlog com foco em valor de negócio</li>
             <li>Atuação personalizada como Scrum Master</li>
@@ -165,11 +269,11 @@
          </ul>
          <h3>Unimed Criciúma – Analista de Sistemas (Mai/2021 – Nov/2023)</h3>
          <ul>
-            <li>Manutenção de sistemas legados e banco de dados Oracle 19</li>
+            <li>Manutenção de sistemas legados e do banco de dados Oracle 19c</li>
             <li>Desenvolvimento de scripts PL/SQL e análise de packages</li>
             <li>Participação em reuniões de alinhamento e implantação</li>
             <li>Análise de requisitos de negócio voltados para a área da saúde</li>
-            <li>Conduzindo treinamentos e repasses de conhecimento técnico</li>
+            <li>Condução de treinamentos e repasses de conhecimento técnico</li>
          </ul>
          <h3>Betha Sistemas – Analista de Requisitos (Jun/2018 – Mai/2021)</h3>
          <ul>
@@ -182,7 +286,7 @@
          <ul>
             <li>Desenvolvimento em Delphi e PL/SQL</li>
             <li>Suporte técnico e personalização de sistemas</li>
-            <li>Visitas técnicas para desenvolvimento in-loco</li>
+            <li>Visitas técnicas para desenvolvimento in loco</li>
          </ul>
          <h3>Agrosys Informática – Programador/Consultor (Mai/2009 – Jul/2014)</h3>
          <ul>
@@ -197,7 +301,7 @@
                <strong>Scrum Master</strong> – <a href="https://certification.scrumalliance.org/accounts/1629513-marcos-rocha/certifications/1917937-csm" target="_blank">Scrum Alliance (2024)</a>
             </li>
             <li>
-               <strong>Cibersegurança</strong> – <a href="https://ava.hackersdobem.org.br/badges/badge.php?hash=7d60cbec17d5cc94d5baa4114134acf83d8f0667" target="_blank">Hackers do bem (2025) Nivelamento</a>
+               <strong>Cibersegurança</strong> – <a href="https://ava.hackersdobem.org.br/badges/badge.php?hash=7d60cbec17d5cc94d5baa4114134acf83d8f0667" target="_blank">Hackers do Bem – Nivelamento (2025)</a>
             </li>
          </ul>
       </section>
@@ -205,10 +309,10 @@
          <h2>Formação acadêmica</h2>
          <ul>
             <li>
-               <strong>UFSC</strong> – Bacharelado em tecnologias da informação e comunicação (2011–2015)
+               <strong>UFSC</strong> – Bacharelado em Tecnologias da Informação e Comunicação (2011–2015)
             </li>
             <li>
-               <strong>Cedup Abílio Paulo</strong> – Técnico em programação de sistemas (2003–2005)
+               <strong>Cedup Abílio Paulo</strong> – Técnico em Programação de Sistemas (2003–2005)
             </li>
          </ul>
       </section>
@@ -217,7 +321,7 @@
          <h3>AruSuperGuia 📸 (Projeto pessoal)</h3>
          <ul>
             <li>
-               <strong>Contexto:</strong> Concurso Cultural Belinzoni Dino Parque
+               <strong>Contexto:</strong> Concurso Cultural do Belinzoni Dino Parque
             </li>
             <li>
                <strong>Tecnologia:</strong> HTML, JavaScript, Tailwind CSS, Supabase (PostgreSQL, OAuth Google, Storage), Cloudflare Turnstile, Netlify
@@ -278,31 +382,37 @@
       <section class="skills">
          <div>
             <h2>Competências técnicas</h2>
-            <ul>
-               <li>PL/SQL, Oracle 19c, Delphi, Progress, Postman, API REST, Scrum, Kanban, OutSystem, Jira, ServiceNow
-               </li>
+            <ul class="badge-list">
+               <li class="badge">PL/SQL</li>
+               <li class="badge">Oracle 19c</li>
+               <li class="badge">Delphi</li>
+               <li class="badge">Progress</li>
+               <li class="badge">Postman</li>
+               <li class="badge">API REST</li>
+               <li class="badge">Scrum</li>
+               <li class="badge">Kanban</li>
+               <li class="badge">OutSystem</li>
+               <li class="badge">Jira</li>
+               <li class="badge">ServiceNow</li>
             </ul>
          </div>
          <div>
             <h2>Competências pessoais</h2>
-            <ul>
-               <li>Liderança, Comunicação, Resolução de problemas, Proatividade, Trabalho em equipe
-               </li>
+            <ul class="badge-list">
+               <li class="badge">Liderança</li>
+               <li class="badge">Comunicação</li>
+               <li class="badge">Resolução de problemas</li>
+               <li class="badge">Proatividade</li>
+               <li class="badge">Trabalho em equipe</li>
             </ul>
          </div>
       </section>
       <section>
          <h2>Atividades Voluntárias</h2>
-         <div style="margin-bottom: 2rem; padding: 0.12rem 1rem; background-color: #f9f9f9; border-left: 6px solid #006400; border-radius: 1px;">
-            <h3>Projeto Heróis em Ação – Arqueiro Verde 🏹</h3>
-            <span>2018 – 2019</span>
-            <p style="text-align: justify;">Participação voluntária em visitas ao Hospital São José, em Criciúma/SC, caracterizado como o personagem Arqueiro Verde. As ações eram voltadas principalmente na ala oncológica infantil, com o objetivo de levar alegria, esperança e acolhimento para as crianças em tratamento. A iniciativa promovia momentos de descontração e fortalecimento emocional para pacientes e familiares.</p>
-         </div>
-         <div style="margin-bottom: 2rem; padding: 0.2rem 1rem; background-color: #f9f9f9; border-left: 6px solid #B22222; border-radius: 1px;">
-            <h3>Bombeiro Comunitário – Corpo de Bombeiros 🚒</h3>
-            <span>2017 – 2018</span>
-            <p style="text-align: justify;">Atuação como bombeiro comunitário em apoio as equipes operacionais do Corpo de Bombeiros de Santa Catarina. As atividades incluíam atendimentos de primeiros socorros, suporte em ocorrências de combate a incêndios e ações educativas junto à comunidade.</p>
-         </div>
+         <h3>Projeto Heróis em Ação – Arqueiro Verde 🏹 <span class="date">(2018 – 2019)</span></h3>
+         <p style="text-align: justify;">Participação voluntária em visitas ao Hospital São José, em Criciúma/SC, caracterizado como o personagem Arqueiro Verde. As ações eram voltadas principalmente para a ala oncológica infantil, com o objetivo de levar alegria, esperança e acolhimento para as crianças em tratamento. A iniciativa promovia momentos de descontração e fortalecimento emocional para pacientes e familiares.</p>
+         <h3>Bombeiro Comunitário – Corpo de Bombeiros 🚒 <span class="date">(2017 – 2018)</span></h3>
+         <p style="text-align: justify;">Atuação como bombeiro comunitário em apoio às equipes operacionais do Corpo de Bombeiros de Santa Catarina. As atividades incluíam atendimentos de primeiros socorros, suporte em ocorrências de combate a incêndios e ações educativas junto à comunidade.</p>
       </section>
    </main>
 </body>
