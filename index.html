@@ -167,16 +167,26 @@
          padding-left: 1.2rem;
       }
 
-      .contact,
       .skills {
          display: flex;
          flex-wrap: wrap;
          gap: 2rem;
       }
 
-      .contact div,
       .skills div {
          flex: 1;
+      }
+
+      .contact-items {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         gap: 1rem 2rem;
+      }
+
+      .contact-items p {
+         margin: 0;
+         text-align: left;
       }
 
       .badge {
@@ -198,20 +208,47 @@
       @media print {
          body {
             background: white;
+            font-size: 11px;
          }
 
          .header-flex {
             background: white !important;
             color: black !important;
+            padding: 0.5rem 1rem;
+         }
+
+         .header-flex img {
+            width: 80px;
+            height: 80px;
+         }
+
+         .header-text h1 {
+            font-size: 1.4rem;
          }
 
          .header-text p {
             color: #333 !important;
+            font-size: 0.9rem;
+            margin: 0.2rem 0;
+         }
+
+         h2 {
+            font-size: 1.1rem;
+         }
+
+         h3 {
+            font-size: 1rem;
+         }
+
+         section {
+            margin-bottom: 0.75rem;
+            padding-top: 0.5rem;
          }
 
          main {
             box-shadow: none;
             margin: 0;
+            padding: 0.5rem 1rem;
             max-width: 100%;
          }
 
@@ -240,13 +277,11 @@
    </div>
    <main>
       <section class="contact">
-         <div>
-            <h2>Contato</h2>
-            <p>📞 (48) 98816-4814</p>
-            <p>📥 <a href="mailto:marcos.f.rocha@outlook.com">marcos.f.rocha@outlook.com</a>
-            </p>
-            <p>🔗 <a href="https://www.linkedin.com/in/marcosfranciscorocha" target="_blank">LinkedIn</a>
-            </p>
+         <h2>Contato</h2>
+         <div class="contact-items">
+            <p>📞 <a href="tel:+5548988164814">(48) 98816-4814</a></p>
+            <p>📥 <a href="mailto:marcos.f.rocha@outlook.com">marcos.f.rocha@outlook.com</a></p>
+            <p>🔗 <a href="https://www.linkedin.com/in/marcosfranciscorocha" target="_blank">LinkedIn</a></p>
          </div>
       </section>
       <section>
